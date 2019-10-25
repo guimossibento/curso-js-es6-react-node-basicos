@@ -25,3 +25,18 @@ var find = usuarios.find(function (item) {
   return item.empresa === 'Google';
 });
 console.log(find);
+
+function multiplicaIdadeFunction(item) {
+  return item.idade *= 2;
+}
+
+;
+
+for (var chave in usuarios) {
+  usuarios[chave].idade *= 2;
+}
+
+var ateCinquenta = usuarios.filter(function (item) {
+  return item.idade < 50;
+});
+console.log(ateCinquenta);
