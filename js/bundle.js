@@ -21,3 +21,7 @@ var usuarioMaior = usuarios.filter(function (item) {
   return item.idade >= 18;
 });
 console.log(usuarioMaior);
+var find = usuarios.find(function (item) {
+  return item.empresa === 'Google';
+});
+console.log(find);
