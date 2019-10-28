@@ -26,12 +26,6 @@ var find = usuarios.find(function (item) {
 });
 console.log(find);
 
-function multiplicaIdadeFunction(item) {
-  return item.idade *= 2;
-}
-
-;
-
 for (var chave in usuarios) {
   usuarios[chave].idade *= 2;
 }
