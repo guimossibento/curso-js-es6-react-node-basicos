@@ -1,36 +1,35 @@
 "use strict";
 
-var usuarios = [{
-  nome: 'Diego',
-  idade: 23,
-  empresa: 'Rocketseat'
-}, {
-  nome: 'Gabriel',
-  idade: 15,
-  empresa: 'Rocketseat'
-}, {
-  nome: 'Lucas',
-  idade: 30,
-  empresa: 'Facebook'
-}];
-var idades = usuarios.map(function (item) {
-  return item.idade;
-});
-console.log(idades);
-var usuarioMaior = usuarios.filter(function (item) {
-  return item.idade >= 18;
-});
-console.log(usuarioMaior);
-var find = usuarios.find(function (item) {
-  return item.empresa === 'Google';
-});
-console.log(find);
+// 3.1
+var arr = [1, 2, 3, 4, 5];
+console.log(arr.map(function (item) {
+  return item + 10;
+})); // 3.2
+// Dica: Utilize uma constante pra function
 
-for (var chave in usuarios) {
-  usuarios[chave].idade *= 2;
-}
+/*const usuario = { nome: 'Diego', idade: 23 };
+const {idade} = usuario;
+console.log(idade);*/
+// 3.3
+// Dica: Utilize uma constante pra function
 
-var ateCinquenta = usuarios.filter(function (item) {
-  return item.idade < 50;
-});
-console.log(ateCinquenta);
+var nome = "Diego";
+var idade = 23;
+
+var mostraUsuario = function mostraUsuario() {
+  var nome = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'Diego';
+  var idade = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 18;
+  return {
+    nome: nome,
+    idade: idade
+  };
+};
+
+console.log(mostraUsuario(nome, idade));
+console.log(mostraUsuario(nome)); // 3.4
+
+var promise = function promise() {
+  return new Promise(function (resolve, reject) {
+    return resolve();
+  });
+};
